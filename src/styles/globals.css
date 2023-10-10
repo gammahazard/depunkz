@@ -1,0 +1,76 @@
+/* ... other styles */
+
+.logo {
+    color: #ff2d55;
+    font-size: 45px;
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+    line-height: 59px;
+  }
+  .join-btn-mobile {
+    color: #ff2d55; /* Red color text */
+    border-color: rgba(255, 255, 255, 0.5); /* Lighter than background color border */
+    font-size: 16px;
+    font-family: "Source Sans Pro";
+  }
+  .nav-item {
+    color: white;
+    font-size: 16px;
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  /* If you want to remove the border and background on hover and focus as well */
+  .nav-item:hover,
+  .nav-item:focus {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  .join-btn {
+    color: #ff2d55;
+    border-color: rgba(255, 255, 255, 0.5); /* Lighter than background color */
+    font-size: 16px;
+    font-family: "Source Sans Pro";
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  .drawer-enter {
+    animation: slideIn 0.3s ease-in-out forwards;
+  }
+  
+  .drawer-exit {
+    animation: slideOut 0.3s ease-in-out forwards;
+  }
+  
+  /* Adjust top value according to your Navbar height */
+  .image {
+    top: 140px; /* Adjusted value */
+    left: 0px;
+    width: 1440px;
+    height: 522px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
