@@ -33,7 +33,7 @@ const MaintenanceMode: React.FC<MaintenanceModeProps> = ({ active }) => {
           mb: 2,
         }}
       >
-        We'll be back soon!
+        We&apos;ll be back soon! {/* <-- Fixed this line */}
       </Typography>
       <Typography
         sx={{
