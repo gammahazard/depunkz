@@ -1,3 +1,4 @@
+// src/components/Footer.tsx
 import { Box, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -33,8 +34,14 @@ const styles = {
     backgroundColor: '#000',
     color: '#fff',
     padding: '20px 40px',
+    position: 'relative',
+    bottom: 0, // This ensures that the footer stays at the bottom of the page
+    width: '100%', // This ensures that the footer is full-width
   },
   mobileContainer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
     padding: '20px 10px',
   },
   title: {

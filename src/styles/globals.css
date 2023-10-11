@@ -1,5 +1,16 @@
 /* ... other styles */
-
+body {
+  cursor: url('/SP7NormalStatic.cur'), auto;
+}
+p, h1, h2, h3, h4, h5, h6, input, textarea {
+  cursor: url('/SP6Text.cur'), auto;
+}
+body.link-hovered,
+button:hover,
+a:hover
+ {
+  cursor: url('/SP7Precision.cur'), auto !important; 
+}
 .logo {
     color: #ff2d55;
     font-size: 45px;
@@ -7,6 +18,7 @@
     font-weight: 700;
     line-height: 59px;
   }
+
   .join-btn-mobile {
     color: #ff2d55; /* Red color text */
     border-color: rgba(255, 255, 255, 0.5); /* Lighter than background color border */

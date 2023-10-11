@@ -49,7 +49,7 @@ const SectionText = () => {
             color: '#000000',
             fontSize: '20px',
             fontWeight: 700,
-            marginBottom:'8px',
+            marginBottom: isMobile ? '8px' : '0px', // Added this line
             lineHeight: '26px',
             width: '200px',
             height: '60px',
@@ -71,6 +71,7 @@ const SectionText = () => {
             width: '156px',
             height: '60px',
             outline: 'none',
+ 
           }}
         >
           Buy NFT
