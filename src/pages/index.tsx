@@ -3,12 +3,13 @@ import { Box } from '@mui/material';
 import Navbar from '../components/Navbar';
 import SectionText from '../components/SectionText';  // Import the new component
 import Roadmap from '../components/Roadmap';
+import AnimationComponent from '../components/AnimationComponent';
 import Footer from '../components/Footer';
 export default function Home() {
   return (
     <Box>
       <Navbar />
-
+<AnimationComponent/>
       {/* Banner image section */}
       <Box my={4}>
         {/* Replace 'banner.jpg' with your actual banner image path */}

@@ -3,6 +3,7 @@
 import { ReactNode } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
+import AnimationComponent from './AnimationComponent'; // Adjust the path based on the actual file location
 
 const theme = createTheme({
   palette: {
@@ -45,6 +46,7 @@ export default function Theme({ children }: ThemeProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <AnimationComponent />
       {children}
     </ThemeProvider>
   );

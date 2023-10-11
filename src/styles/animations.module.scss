@@ -1,0 +1,97 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  z-index: -5; 
+  pointer-events: none;
+}
+
+.circle-container {
+  $particleNum: 50;
+  pointer-events: none;
+  position: absolute;
+  transform: translateY(-10vh);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  .circle {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    background-image: radial-gradient(
+      hsl(345, 90%, 49%), 
+      hsl(345, 100%, 50%) 10%, 
+      hsl(0, 0%, 0%) 56%
+    );
+
+    animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+
+    @keyframes fade-frames {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.7;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scale-frames {
+      0% {
+        transform: scale3d(0.1, 0.1, 1);
+      }
+
+      50% {
+        transform: scale3d(1.5, 1.5, 1);
+      }
+
+      100% {
+        transform: scale3d(0.2, 0.2, 1);
+      }
+    }
+  }
+
+  $particleBaseSize: 15;
+
+  @for $i from 1 through $particleNum {
+    &:nth-child(#{$i}) {
+      $circleSize: random($particleBaseSize);
+      width: $circleSize + px;
+      height: $circleSize + px;
+
+      $startPositionY: random(10) + 100;
+      $framesName: "move-frames-" + $i;
+      $moveDuration: 28000 + random(9000) + ms;
+
+      animation-name: #{$framesName};
+      animation-duration: $moveDuration;
+      animation-delay: random(37000) + ms;
+
+      @keyframes #{$framesName} {
+        from {
+          transform: translate3d(random(100) + vw, $startPositionY + vh, 0);
+        }
+
+        to {
+          transform: translate3d(random(100) + vw, -$startPositionY - random(30) + vh, 0);
+        }
+      }
+
+      .circle {
+        $brightness: 50% + random(50%); 
+        filter: brightness($brightness);
+        opacity: 0.3 + (random(50) / 100); // Changed this line to generate a float random opacity
+        animation-delay: random(4000) + ms;
+      }
+    }
+  }
+}
