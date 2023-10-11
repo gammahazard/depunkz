@@ -1,11 +1,17 @@
-// src/components/Footer.tsx
 import { Box, Typography } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const Footer = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
-    <Box sx={styles.container}>
+    <Box sx={{ ...styles.container, ...(isMobile && styles.mobileContainer) }}>
       <Box>
-        <Typography sx={styles.title}>Connect with Us</Typography>
+        <Typography sx={{ ...styles.title, ...(isMobile && styles.mobileTitle) }}>
+          Connect with Us
+        </Typography>
         <Typography sx={styles.subtitle}>Explore the world of DePunkz NFTs.</Typography>
       </Box>
 
@@ -18,7 +24,8 @@ const Footer = () => {
     </Box>
   );
 };
- const styles = {
+
+const styles = {
   container: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -27,12 +34,19 @@ const Footer = () => {
     color: '#fff',
     padding: '20px 40px',
   },
+  mobileContainer: {
+    padding: '20px 10px',
+  },
   title: {
     fontSize: '32px',
     fontFamily: '"Source Sans Pro"',
     fontWeight: 600,
     lineHeight: '36px',
     mb: '10px',
+  },
+  mobileTitle: {
+    fontSize: '24px',
+    lineHeight: '28px',
   },
   subtitle: {
     fontSize: '18px',

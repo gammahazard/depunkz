@@ -1,18 +1,30 @@
 import { Box, Typography, Button } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const SectionText = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
-    <Box display="flex" alignItems="center" justifyContent="space-between" my={4} px={4}>
-      <Box flex={1} mr={2} p={2}>
+    <Box 
+      display="flex" 
+      flexDirection={isMobile ? 'row' : 'row'} 
+      alignItems="center" 
+      justifyContent="space-between" 
+      my={4} 
+      px={isMobile ? 2 : 4}
+    >
+      <Box flex={1} p={2} mb={isMobile ? 0 : 0} maxWidth={isMobile ? '100%' : 'unset'}>
         <Typography 
           variant="h4" 
           gutterBottom 
           style={{
             color: '#ffffff',
-            fontSize: '60px',
+            fontSize: isMobile ? '32px' : '60px',
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,
-            lineHeight: '70px',
+            lineHeight: isMobile ? '36px' : '70px',
           }}
         >
           DePunkz Society
@@ -37,10 +49,11 @@ const SectionText = () => {
             color: '#000000',
             fontSize: '20px',
             fontWeight: 700,
+            marginBottom:'8px',
             lineHeight: '26px',
-            width: '281px',
+            width: '200px',
             height: '60px',
-            marginRight: '20px', // added for spacing between buttons
+            marginRight: '20px',
             outline: 'none',
           }}
         >
@@ -55,7 +68,7 @@ const SectionText = () => {
             fontSize: '20px',
             fontWeight: 700,
             lineHeight: '26px',
-            width: '172px',
+            width: '156px',
             height: '60px',
             outline: 'none',
           }}
@@ -65,16 +78,15 @@ const SectionText = () => {
       </Box>
       <Box 
         flex={1} 
-        ml={2} 
         p={2} 
         style={{
           backgroundImage: 'url(/section1.png)',
           backgroundPosition: 'center center',
-          backgroundSize: 'cover',
+          backgroundSize: isMobile ? 'contain' : 'cover',
           backgroundRepeat: 'no-repeat',
           borderRadius: '8px',
-          width: '440px',
-          height: '440px',
+          width: '100%',  
+          height: isMobile ? '550px' : '440px',
         }}
       ></Box>
     </Box>
