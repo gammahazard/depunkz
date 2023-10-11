@@ -1,15 +1,35 @@
 /* ... other styles */
 body {
-  cursor: url('/SP7NormalStatic.cur'), auto;
+  cursor: url('/3D_red_normalselect.cur'), auto;
 }
-p, h1, h2, h3, h4, h5, h6, input, textarea {
-  cursor: url('/SP6Text.cur'), auto;
+
+/* Cursor for text and input fields */
+body p,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body input,
+body textarea {
+  cursor: url('/3D_red_textselect.cur'), auto;
 }
-body.link-hovered,
-button:hover,
-a:hover
- {
-  cursor: url('/SP7Precision.cur'), auto !important; 
+
+/* Cursor for links, buttons, and other clickable elements */
+body a,
+body button,
+body [role="button"],
+body [data-clickable] {
+  cursor: url('/3D_red_precisionselect.cur'), auto;
+}
+
+/* Override the cursor for hover states on links and buttons */
+body a:hover,
+body button:hover,
+body [role="button"]:hover,
+body [data-clickable]:hover {
+  cursor: url('/3D_red_precisionselect.cur'), auto;
 }
 .logo {
     color: #ff2d55;
