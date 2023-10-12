@@ -1,7 +1,7 @@
-// src/components/Footer.tsx
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, IconButton } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import Image from 'next/image';
 
 const Footer = () => {
   const theme = useTheme();
@@ -14,6 +14,14 @@ const Footer = () => {
           Connect with Us
         </Typography>
         <Typography sx={styles.subtitle}>Explore the world of DePunkz NFTs.</Typography>
+        <Box sx={styles.iconsContainer}>
+          <IconButton sx={styles.icon} href="#" target="_blank" rel="noopener noreferrer">
+            <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
+          </IconButton>
+          <IconButton sx={styles.icon} href="#" target="_blank" rel="noopener noreferrer">
+            <Image src="/discord.svg" alt="Discord" width={24} height={24} />
+          </IconButton>
+        </Box>
       </Box>
 
       <Box>
@@ -38,6 +46,7 @@ const styles = {
     bottom: 0, // This ensures that the footer stays at the bottom of the page
     width: '100%', // This ensures that the footer is full-width
   },
+  
   mobileContainer: {
     flexDirection: 'column',
     alignItems: 'center',
@@ -68,6 +77,18 @@ const styles = {
     lineHeight: '22px',
     mb: '10px',
   },
+  iconsContainer: {
+    display: 'flex',
+    mt: 2, // Adjust the margin as needed
+  },
+  icon: {
+    color: '#fff', // Adjust the color as needed
+    ml: 1, // Adjust the margin as needed
+    '&:first-of-type': {
+      ml: 0, // Remove left margin for the first icon
+    },
+  },
+
 };
 
 export default Footer;

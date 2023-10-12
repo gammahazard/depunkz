@@ -66,7 +66,7 @@ const Series = () => {
             ml: 2,
           }}
         >
-          Season
+          Series
         </Button>
         <Button
           sx={{

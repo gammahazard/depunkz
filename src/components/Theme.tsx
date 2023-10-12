@@ -3,7 +3,7 @@
 import { ReactNode } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-import AnimationComponent from './AnimationComponent'; // Adjust the path based on the actual file location
+import AnimationComponent from './AnimationComponent'; 
 
 const theme = createTheme({
   palette: {
@@ -24,6 +24,7 @@ const theme = createTheme({
 
           '&:hover': {
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            color: 'white'
           },
         },
       },

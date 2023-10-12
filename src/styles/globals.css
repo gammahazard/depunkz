@@ -40,10 +40,11 @@ body [data-clickable]:hover {
   }
 
   .join-btn-mobile {
-    color: #ff2d55; /* Red color text */
+    color:black;
     border-color: rgba(255, 255, 255, 0.5); /* Lighter than background color border */
     font-size: 16px;
     font-family: "Source Sans Pro";
+    background-color:#ff2d55;
   }
   .nav-item {
     color: white;
@@ -68,7 +69,9 @@ body [data-clickable]:hover {
     color: #ff2d55;
     border-color: rgba(255, 255, 255, 0.5); /* Lighter than background color */
     font-size: 16px;
+    background-color:#ff2d55;
     font-family: "Source Sans Pro";
+  color:black;
   }
   @keyframes slideIn {
     from {

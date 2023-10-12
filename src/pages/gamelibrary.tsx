@@ -35,40 +35,21 @@ const GameLibrary = () => {
         </Box>
 
         <Box display="flex" justifyContent="center" alignItems="center" my={4}>
-          <TextField
-            sx={{
-              width: '35%',
-              height: '59px',
-              backgroundColor: '#323232',
-              color: '#b8b8b8',
-              fontSize: '16px',
-              fontFamily: '"Source Sans Pro"',
-              fontWeight: 500,
-              lineHeight: '22px',
-              '& .MuiOutlinedInput-notchedOutline': {
-                border: 'none',
-              },
-            }}
-            placeholder="Search for a game"
-            variant="outlined"
-          />
-          
-          <Button
-            sx={{
-              width: '220px',
-              height: '58px',
-              backgroundColor: '#ff3b30',
-              color: '#000',
-              fontSize: '20px',
-              fontFamily: '"Source Sans Pro"',
-              fontWeight: 700,
-              lineHeight: '26px',
-              ml: 2,
-            }}
-          >
-            Send
-          </Button>
-        </Box>
+  <Typography
+    sx={{
+      color: '#ff2d55',
+      fontSize: '96px',
+      fontFamily: '"Source Sans Pro"',
+      fontWeight: 700,
+      lineHeight: '125px',
+      mb: 4,
+      textAlign: 'center',
+    }}
+  >
+    Coming Soon
+  </Typography>
+</Box>
+
       </Box>
 
       <Footer />
