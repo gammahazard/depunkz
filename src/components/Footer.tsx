@@ -14,7 +14,7 @@ const Footer = () => {
           Connect with Us
         </Typography>
         <Typography sx={styles.subtitle}>Explore the world of DePunkz NFTs.</Typography>
-        <Box sx={styles.iconsContainer}>
+        <Box sx={{ ...styles.iconsContainer, ...(isMobile && styles.mobileIconsContainer) }}>
           <IconButton sx={styles.icon} href="#" target="_blank" rel="noopener noreferrer">
             <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
           </IconButton>
@@ -43,8 +43,8 @@ const styles = {
     color: '#fff',
     padding: '20px 40px',
     position: 'relative',
-    bottom: 0, // This ensures that the footer stays at the bottom of the page
-    width: '100%', // This ensures that the footer is full-width
+    bottom: 0,
+    width: '100%',
   },
   
   mobileContainer: {
@@ -53,6 +53,7 @@ const styles = {
     textAlign: 'center',
     padding: '20px 10px',
   },
+  
   title: {
     fontSize: '32px',
     fontFamily: '"Source Sans Pro"',
@@ -60,16 +61,19 @@ const styles = {
     lineHeight: '36px',
     mb: '10px',
   },
+  
   mobileTitle: {
     fontSize: '24px',
     lineHeight: '28px',
   },
+  
   subtitle: {
     fontSize: '18px',
     fontFamily: '"Source Sans Pro"',
     fontWeight: 700,
     lineHeight: '22px',
   },
+  
   menuItem: {
     fontSize: '18px',
     fontFamily: '"Source Sans Pro"',
@@ -77,18 +81,24 @@ const styles = {
     lineHeight: '22px',
     mb: '10px',
   },
+  
   iconsContainer: {
     display: 'flex',
-    mt: 2, // Adjust the margin as needed
+    mt: 2,
   },
+  
+  mobileIconsContainer: {
+    justifyContent: 'center',
+    width: '100%',
+  },
+  
   icon: {
-    color: '#fff', // Adjust the color as needed
-    ml: 1, // Adjust the margin as needed
+    color: '#fff',
+    ml: 1,
     '&:first-of-type': {
-      ml: 0, // Remove left margin for the first icon
+      ml: 0,
     },
   },
-
 };
 
 export default Footer;
