@@ -25,10 +25,10 @@ const Footer = () => {
       </Box>
 
       <Box>
-        <Typography sx={styles.menuItem}>Learn More</Typography>
-        <Typography sx={styles.menuItem}>Discover</Typography>
-        <Typography sx={styles.menuItem}>Get Valuable</Typography>
-        <Typography sx={styles.menuItem}>Contact The</Typography>
+        <Typography sx={styles.menuItem}>Whitepaper</Typography>
+        <Typography sx={styles.menuItem}>Series</Typography>
+        <Typography sx={styles.menuItem}>Roadmap</Typography>
+        <Typography sx={styles.menuItem}>About us</Typography>
       </Box>
     </Box>
   );

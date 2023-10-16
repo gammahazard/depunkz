@@ -1,6 +1,7 @@
 // src/components/Roadmap.tsx
 import { Box, Card, Divider, Typography } from '@mui/material';
 import { CheckCircleOutline, Loop } from '@mui/icons-material';
+import Image from 'next/image';  // Import the Image component from Next.js
 
 const Roadmap = () => {
   return (
@@ -62,9 +63,19 @@ const Roadmap = () => {
         </Box>
       </Card>
       <Divider sx={styles.divider} />
+      <Box mt={4} display="flex" justifyContent="center" alignItems="center">
+        <Image 
+          src="/logo.png"   // Update with the path to your logo
+          alt="DePunkz Logo" // Add alt text for accessibility
+          width={200}        // Adjust the width as needed
+          height={200}       // Adjust the height as needed
+          objectFit="contain"
+        />
+      </Box>
     </Box>
   );
 };
+    
 
 const styles = {
   title: {

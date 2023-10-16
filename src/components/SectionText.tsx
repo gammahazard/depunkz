@@ -9,16 +9,17 @@ const SectionText = () => {
   return (
     <Box 
       display="flex" 
-      flexDirection={isMobile ? 'row' : 'row'} 
+      flexDirection={isMobile ? 'column' : 'row'} 
       alignItems="center" 
       justifyContent="space-between" 
       my={4} 
       px={isMobile ? 2 : 4}
     >
-      <Box flex={1} p={2} mb={isMobile ? 0 : 0} maxWidth={isMobile ? '100%' : 'unset'}>
+      <Box flex={1} p={2} mb={isMobile ? 2 : 0} maxWidth="100%">
         <Typography 
           variant="h4" 
           gutterBottom 
+          align="left"
           style={{
             color: '#ffffff',
             fontSize: isMobile ? '32px' : '60px',
@@ -27,55 +28,56 @@ const SectionText = () => {
             lineHeight: isMobile ? '36px' : '70px',
           }}
         >
-          DePunkz Society
+          DePunkz
         </Typography>
         <Typography 
           variant="body1" 
           paragraph 
+          align="left"
           style={{
             color: '#ffffff',
             fontSize: '20px',
             fontFamily: '"Source Sans Pro"',
             lineHeight: '26px',
+            marginBottom: '20px',
           }}
         >
           DePunkz is an innovative NFT project - a decentralized platform for unique digital collectibles.
           Experience the thrill of owning rare and valuable digital assets with Depunkz.
         </Typography>
-        <Button 
-          variant="contained"
-          style={{
-            backgroundColor: '#ff2d55',
-            color: '#000000',
-            fontSize: '20px',
-            fontWeight: 700,
-            marginBottom: isMobile ? '8px' : '0px', // Added this line
-            lineHeight: '26px',
-            width: '200px',
-            height: '60px',
-            marginRight: '20px',
-            outline: 'none',
-          }}
-        >
-          Discover DePunkz
-        </Button>
-        <Button 
-          variant="outlined"
-          style={{
-            borderColor: '#ff2d55',
-            color: '#ff2d55',
-            backgroundColor: 'rgba(0,0,0,0)',
-            fontSize: '20px',
-            fontWeight: 700,
-            lineHeight: '26px',
-            width: '156px',
-            height: '60px',
-            outline: 'none',
- 
-          }}
-        >
-          Buy NFT
-        </Button>
+        <Box display="flex" gap={2} style={{maxWidth: '100%'}}>
+          <Button 
+            variant="contained"
+            style={{
+              backgroundColor: '#ff2d55',
+              color: '#000000',
+              fontSize: '20px',
+              fontWeight: 700,
+              lineHeight: '26px',
+              width: '60%', // Adjusted width
+              height: '60px',
+              marginRight: '20px',
+              outline: 'none',
+            }}
+          >
+            Discover DePunkz
+          </Button>
+          <Button 
+            variant="outlined"
+            style={{
+              borderColor: '#ff2d55',
+              color: '#ff2d55',
+              fontSize: '20px',
+              fontWeight: 700,
+              lineHeight: '26px',
+              width: '40%', // Adjusted width
+              height: '60px',
+              outline: 'none',
+            }}
+          >
+            Buy NFT
+          </Button>
+        </Box>
       </Box>
       <Box 
         flex={1} 
@@ -83,11 +85,12 @@ const SectionText = () => {
         style={{
           backgroundImage: 'url(/section1.png)',
           backgroundPosition: 'center center',
-          backgroundSize: isMobile ? 'contain' : 'cover',
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           borderRadius: '8px',
           width: '100%',  
-          height: isMobile ? '550px' : '440px',
+          height: 'auto',
+          minHeight: isMobile ? '300px' : '550px',
         }}
       ></Box>
     </Box>
