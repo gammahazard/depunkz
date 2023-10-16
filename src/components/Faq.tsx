@@ -7,12 +7,11 @@ import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 const FAQ = () => {
   const [expanded, setExpanded] = useState([false, false, false, false, false, false]);
 
-  const toggleExpansion = (index) => {
+  const toggleExpansion = (index: number) => {
     const newExpanded = [...expanded];
     newExpanded[index] = !newExpanded[index];
     setExpanded(newExpanded);
   };
-
   return (
     <Box my={4} px={4}>
       <Typography variant="h4" sx={styles.title}>
