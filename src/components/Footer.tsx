@@ -2,8 +2,10 @@ import { Box, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
-
-const Footer = ({ onRoadmapClick }) => {
+interface FooterProps {
+  onRoadmapClick: () => void; // Assuming onRoadmapClick is a function with no arguments
+}
+const Footer: React.FC<FooterProps> = ({ onRoadmapClick }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
