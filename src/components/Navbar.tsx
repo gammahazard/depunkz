@@ -51,7 +51,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
           <Link href="/whitepaper" passHref><Button className="nav-item">Litepaper</Button></Link>
           <Link href="/series" passHref><Button className="nav-item">Series</Button></Link>
           <Button className="nav-item" onClick={handleRoadmapClick}>Roadmap</Button>
-          <Link href="/about-us" passHref><Button className="nav-item">About Us</Button></Link>
+          <Link href="/overview" passHref><Button className="nav-item">About Us</Button></Link>
           <Link href="/merchandise" passHref><Button className="nav-item">Merchandise</Button></Link>
         </Box>
       </Box>
