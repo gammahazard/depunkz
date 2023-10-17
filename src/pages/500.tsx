@@ -53,7 +53,7 @@ const Custom500 = () => {
           </Button>
         </Link>
       </Box>
-      <Footer />
+      <Footer onRoadmapClick={() => {}} />
     </Box>
   );
 };
