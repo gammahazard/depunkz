@@ -20,7 +20,7 @@ const ErrorPage = ({ statusCode }: ErrorProps) => {
             : 'An error occurred on client'}
         </Typography>
       </Box>
-      <Footer />
+      <Footer onRoadmapClick={() => {}} />
     </Box>
   );
 };
