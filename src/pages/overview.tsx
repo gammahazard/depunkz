@@ -150,7 +150,7 @@ export default function AboutUs() {
     </Box>
 </Box>
 
-      <Footer />
+<Footer onRoadmapClick={() => {}} />
     </Box>
   );
 }

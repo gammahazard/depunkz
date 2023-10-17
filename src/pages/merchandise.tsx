@@ -24,7 +24,7 @@ const Merchandise = () => {
           </Box>
         </Box>
   
-        <Footer />
+        <Footer onRoadmapClick={() => {}} />
       </Box>
     );
   };

@@ -31,8 +31,8 @@ const Team = () => {
          Team
           </Typography>
         </Box>
-      </Box>
-      <Footer />
+      </Box>      
+      <Footer onRoadmapClick={() => {}} />
     </Box>
   );
 };
