@@ -72,7 +72,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
         <IconButton href="https://twitter.com/depunkzNFT" target="_blank" rel="noopener noreferrer">
           <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
         </IconButton>
-        <IconButton href="https://discord.com" target="_blank" rel="noopener noreferrer">
+        <IconButton href="https://discord.gg/FCPeYAUgW" target="_blank" rel="noopener noreferrer">
           <Image src="/discord.svg" alt="Discord" width={24} height={24} />
         </IconButton>
         <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMobileMenuOpen}>
