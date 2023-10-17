@@ -48,10 +48,12 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
 
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center" justifyContent="center" flexGrow={1}>
         <Box display="flex" alignItems="center" gap={2}>
-          <Link href="/whitepaper" passHref><Button className="nav-item">Litepaper</Button></Link>
+        <a href="https://docs.depunkz.io" target="_blank" rel="noopener noreferrer">
+  <Button className="nav-item">Litepaper</Button>
+</a>
           <Link href="/series" passHref><Button className="nav-item">Series</Button></Link>
           <Button className="nav-item" onClick={handleRoadmapClick}>Roadmap</Button>
-          <Link href="/overview" passHref><Button className="nav-item">About Us</Button></Link>
+          <Link href="/overview" passHref><Button className="nav-item">Overview</Button></Link>
           <Link href="/merchandise" passHref><Button className="nav-item">Merchandise</Button></Link>
         </Box>
       </Box>
