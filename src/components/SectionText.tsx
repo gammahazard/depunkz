@@ -37,6 +37,7 @@ const SectionText = () => {
           style={{
             color: '#ffffff',
             fontSize: '20px',
+            width:'70%',
             fontFamily: '"Source Sans Pro"',
             lineHeight: '26px',
             marginBottom: '20px',
@@ -45,7 +46,7 @@ const SectionText = () => {
           DePunkz is an innovative NFT project - a decentralized platform for unique digital collectibles.
           Experience the thrill of owning rare and valuable digital assets with Depunkz.
         </Typography>
-        <Box display="flex" gap={2} style={{maxWidth: '100%'}}>
+        <Box display="flex" gap={2} style={{maxWidth: '80%'}}>
           <Button 
             variant="contained"
             style={{
@@ -85,12 +86,15 @@ const SectionText = () => {
         style={{
           backgroundImage: 'url(/section1.png)',
           backgroundPosition: 'center center',
-          backgroundSize: 'contain',
+          backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           borderRadius: '8px',
-          width: '100%',  
-          height: 'auto',
-          minHeight: isMobile ? '300px' : '550px',
+          marginRight: '12%',
+        
+          maxHeight: isMobile ? '300px' : '350px',
+          minHeight: isMobile ? '300px' : '350px',
+          maxWidth: isMobile ? '300px' : '300px',
+          minWidth: isMobile ? '300px' : '300px',
         }}
       ></Box>
     </Box>

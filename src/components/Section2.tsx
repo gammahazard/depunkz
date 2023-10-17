@@ -40,7 +40,7 @@ const Section2 = () => {
               flexDirection="column"
               alignItems="center"
               textAlign="center"  // Added this to center the text
-              style={{ maxWidth: '300px', width: '100%', margin: '0 auto' }}  // Added auto margins to center the box
+              style={{ maxWidth: '350px', width: '100%', margin: '0 auto' }}  // Added auto margins to center the box
             >
               <Typography 
                 variant="h6" 

@@ -38,7 +38,7 @@ export default function Home() {
       </div>
       <NeohubSection />
       <Faq />
-      <Footer />
+      <Footer onRoadmapClick={scrollToRoadmap} />
     </Box>
   );
 }

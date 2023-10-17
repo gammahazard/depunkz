@@ -1,34 +1,57 @@
-import { Box, Typography, IconButton } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import Image from 'next/image';
+import Link from 'next/link';
 
-const Footer = () => {
+const Footer = ({ onRoadmapClick }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Box sx={{ ...styles.container, ...(isMobile && styles.mobileContainer) }}>
       <Box>
-        <Typography sx={{ ...styles.title, ...(isMobile && styles.mobileTitle) }}>
-          Connect with Us
-        </Typography>
+        <Typography sx={styles.title}>Connect with Us</Typography>
         <Typography sx={styles.subtitle}>Explore the world of DePunkz NFTs.</Typography>
-        <Box sx={{ ...styles.iconsContainer, ...(isMobile && styles.mobileIconsContainer) }}>
-          <IconButton sx={styles.icon} href="#" target="_blank" rel="noopener noreferrer">
-            <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
-          </IconButton>
-          <IconButton sx={styles.icon} href="#" target="_blank" rel="noopener noreferrer">
-            <Image src="/discord.svg" alt="Discord" width={24} height={24} />
-          </IconButton>
-        </Box>
       </Box>
 
-      <Box>
-        <Typography sx={styles.menuItem}>Litepaper</Typography>
-        <Typography sx={styles.menuItem}>Series</Typography>
-        <Typography sx={styles.menuItem}>Roadmap</Typography>
-        <Typography sx={styles.menuItem}>About us</Typography>
+      <Box sx={styles.linksContainer}>
+        <Box sx={styles.menuItemBox}>
+          <Typography
+            component="a"
+            href="https://docs.depunkz.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={styles.menuItemWithWeight}
+          >
+            Litepaper
+          </Typography>
+        </Box>
+
+        <Box sx={styles.menuItemBox}>
+          <Link href="/series" passHref>
+            <Typography component="a" sx={styles.menuItem}>
+              Series
+            </Typography>
+          </Link>
+        </Box>
+
+        <Box sx={styles.menuItemBox}>
+          <Typography
+            sx={styles.menuItemWithWeight}
+            onClick={onRoadmapClick}
+            style={{ cursor: 'pointer' }}
+          >
+            Roadmap
+          </Typography>
+        </Box>
+
+        <Box sx={styles.menuItemBox}>
+          <Link href="/overview" passHref>
+            <Typography component="p" sx={styles.menuItem}>
+              About us
+            </Typography>
+          </Link>
+        </Box>
       </Box>
     </Box>
   );
@@ -38,7 +61,7 @@ const styles = {
   container: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     backgroundColor: '#000',
     color: '#fff',
     padding: '20px 40px',
@@ -46,57 +69,54 @@ const styles = {
     bottom: 0,
     width: '100%',
   },
-  
+
   mobileContainer: {
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
     padding: '20px 10px',
+   
   },
-  
+
   title: {
     fontSize: '32px',
-    fontFamily: '"Source Sans Pro"',
-    fontWeight: 600,
-    lineHeight: '36px',
     mb: '10px',
   },
-  
-  mobileTitle: {
-    fontSize: '24px',
-    lineHeight: '28px',
-  },
-  
+
   subtitle: {
     fontSize: '18px',
-    fontFamily: '"Source Sans Pro"',
-    fontWeight: 700,
-    lineHeight: '22px',
   },
+
+  linksContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-end',
   
+  },
+
+  menuItemBox: {
+    mb: 2,
+  },
+
   menuItem: {
     fontSize: '18px',
-    fontFamily: '"Source Sans Pro"',
-    fontWeight: 700,
-    lineHeight: '22px',
-    mb: '10px',
-  },
-  
-  iconsContainer: {
-    display: 'flex',
-    mt: 2,
-  },
-  
-  mobileIconsContainer: {
-    justifyContent: 'center',
-    width: '100%',
-  },
-  
-  icon: {
     color: '#fff',
-    ml: 1,
-    '&:first-of-type': {
-      ml: 0,
+    cursor: 'pointer',
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+    },
+  },
+
+  menuItemWithWeight: {
+    fontSize: '18px',
+    fontWeight:0,
+   
+    color: '#fff',
+    cursor: 'pointer',
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
     },
   },
 };

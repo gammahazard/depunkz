@@ -19,6 +19,7 @@ export default function NeohubSection() {
           height: { xs: 'auto', md: '446px' }, // Updated for responsive design
           maxWidth: { xs: '345px', md: 'none' }, // Set max width for smaller screens
           borderRadius: '8px',
+         right:'500px',
           backgroundImage: 'url(/logo.png)',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
