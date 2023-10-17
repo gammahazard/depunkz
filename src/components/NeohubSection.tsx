@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from '@mui/material';
-
+import Link from 'next/link';
 export default function NeohubSection() {
   return (
     <Box 
@@ -90,7 +90,7 @@ export default function NeohubSection() {
             }}
           >
             Coming Soon
-          </Button>
+    </Button>
           <Button
             variant="contained"
             sx={{
@@ -102,12 +102,22 @@ export default function NeohubSection() {
               lineHeight: '26px',
               width: '200px',
               height: '60px',
+              
             }}
           >
-            Whitepaper
+<a href="https://docs.depunkz.io" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
+  Whitepaper
+</a>
+
+
+
           </Button>
+        
         </Box>
+      
       </Box>
+     
     </Box>
+ 
   );
 }
