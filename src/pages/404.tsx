@@ -53,7 +53,9 @@ const Custom404 = () => {
           </Button>
         </Link>
       </Box>
-      <Footer />
+      <Footer onRoadmapClick={() => {}} />
+
+
     </Box>
   );
 };
