@@ -63,15 +63,7 @@ const Roadmap = () => {
         </Box>
       </Card>
       <Divider sx={styles.divider} />
-      <Box mt={4} display="flex" justifyContent="center" alignItems="center">
-        <Image 
-          src="/logo.png"   // Update with the path to your logo
-          alt="DePunkz Logo" // Add alt text for accessibility
-          width={200}        // Adjust the width as needed
-          height={200}       // Adjust the height as needed
-          objectFit="contain"
-        />
-      </Box>
+     
     </Box>
   );
 };

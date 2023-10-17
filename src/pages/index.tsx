@@ -6,6 +6,7 @@ import Section2 from '../components/Section2';
 import Roadmap from '../components/Roadmap';
 import Faq from '../components/Faq';
 import AnimationComponent from '../components/AnimationComponent';
+import NeohubSection from '../components/NeohubSection';
 import Footer from '../components/Footer';
 import { useRouter } from 'next/router';
 
@@ -27,14 +28,15 @@ export default function Home() {
     <Box>
       <Navbar onRoadmapClick={scrollToRoadmap} />
       <AnimationComponent />
-      <Box my={4}>
-        <img src="/banner.png" alt="DePunkz Banner" style={{ width: '100%', height: 'auto' }} />
-      </Box>
+      <Box my={4} style={{ marginTop: 0 }}>
+  <img src="/banner.png" alt="DePunkz Banner" style={{ width: '100%', height: 'auto' }} />
+</Box>
       <SectionText />
       <Section2 />
       <div ref={roadmapRef}>
         <Roadmap />
       </div>
+      <NeohubSection />
       <Faq />
       <Footer />
     </Box>
