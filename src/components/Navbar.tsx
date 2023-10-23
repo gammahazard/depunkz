@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { SnackbarCloseReason } from '@mui/material';
+
 interface NavbarProps {
   onRoadmapClick?: () => void;
 }
@@ -16,7 +17,6 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
 
   const handleMobileMenuOpen = () => setMobileMenuOpen(true);
   const handleMobileMenuClose = () => setMobileMenuOpen(false);
-  const handleSnackbarOpen = () => setOpenSnackbar(true);
   const handleSnackbarClose = (event: React.SyntheticEvent | Event, reason?: SnackbarCloseReason) => {
     if (reason === 'clickaway') {
       return;
@@ -32,12 +32,14 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
     }
   };
 
-
+  const handleSnackbarOpen = () => {
+    window.location.href = 'https://app.depunkz.io'; // Redirect to app.depunkz.io
+  };
 
   return (
     <Box display="flex" alignItems="center" justifyContent="space-between" p={2}>
       <Box onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-        <Image 
+        <Image
           src="/logo.png"
           alt="DePunkz Logo"
           width={50}
@@ -48,9 +50,9 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
 
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center" justifyContent="center" flexGrow={1}>
         <Box display="flex" alignItems="center" gap={2}>
-        <a href="https://docs.depunkz.io" target="_blank" rel="noopener noreferrer">
-  <Button className="nav-item">Litepaper</Button>
-</a>
+          <Link href="https://docs.depunkz.io" target="_blank" rel="noopener noreferrer">
+            <Button className="nav-item">Litepaper</Button>
+          </Link>
           <Link href="/series" passHref><Button className="nav-item">Series</Button></Link>
           <Button className="nav-item" onClick={handleRoadmapClick}>Roadmap</Button>
           <Link href="/overview" passHref><Button className="nav-item">Overview</Button></Link>
@@ -108,28 +110,6 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
           </List>
         </Drawer>
       </Box>
-
-      <Snackbar
-  open={openSnackbar}
-  autoHideDuration={3000}
-  onClose={handleSnackbarClose}
-  anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
->
-  <SnackbarContent
-    message="Coming soon!"
-    action={
-      <Button color="inherit" size="small" onClick={handleSnackbarClose}>
-        Close
-      </Button>
-    }
-    sx={{
-      backgroundColor: 'black',
-      color: 'red',
-      border: '1px solid red',
-      borderRadius: '8px',
-    }}
-  />
-</Snackbar>
     </Box>
   );
 }
