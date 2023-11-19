@@ -33,7 +33,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
   };
 
   const handleSnackbarOpen = () => {
-    window.location.href = 'https://app.depunkz.io'; // Redirect to app.depunkz.io
+    setOpenSnackbar(true);
   };
 
   return (
@@ -55,7 +55,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
           </Link>
           <Link href="/series" passHref><Button className="nav-item">Series</Button></Link>
           <Button className="nav-item" onClick={handleRoadmapClick}>Roadmap</Button>
-          <Link href="/overview" passHref><Button className="nav-item">Overview</Button></Link>
+          <Link href="/overview" passHref><Button className="nav-item">About us</Button></Link>
           <Link href="/merchandise" passHref><Button className="nav-item">Merchandise</Button></Link>
         </Box>
       </Box>
@@ -94,7 +94,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
           }}
         >
           <List style={{ alignItems: 'center', textAlign: 'center' }}>
-            {['Whitepaper', 'Series', 'About us', 'Merchandise'].map((text) => (
+            {['Whitepaper', 'Series', 'Overview', 'Merchandise'].map((text) => (
               <ListItem button key={text} onClick={handleMobileMenuClose} style={{ justifyContent: 'center' }}>
                 <Link href={`/${text.toLowerCase().replace(' ', '-')}`} passHref>
                   <Typography variant="body1" className="nav-item" component="a" style={{ textDecoration: 'none' }}>{text}</Typography>
@@ -104,12 +104,18 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
             <ListItem button onClick={() => { handleMobileMenuClose(); handleRoadmapClick(); }} style={{ justifyContent: 'center' }}>
               <Typography variant="body1" className="nav-item" component="div" style={{ textDecoration: 'none' }}>Roadmap</Typography>
             </ListItem>
-            <ListItem button onClick={handleSnackbarOpen} style={{ justifyContent: 'center' }}>
+            <ListItem button onClick={handleSnackbarOpen} style={{ justifyContent: 'center', backgroundColor: 'red!important' }}>
               <Typography variant="body1" className="nav-item" component="div" style={{ textDecoration: 'none' }}>Neohub</Typography>
             </ListItem>
           </List>
         </Drawer>
       </Box>
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+        message="Neohub - Coming Soon!"
+      />
     </Box>
   );
 }

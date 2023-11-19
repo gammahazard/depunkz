@@ -31,7 +31,7 @@ const FAQ = () => {
         {expanded[0] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
       </Box>
       {expanded[0] && (
-        <Typography sx={styles.text}>Answer: TBA</Typography>
+        <Typography sx={styles.text}><ul>DePunkz NFTs are unique digital collectible series focused on utility and gaming.</ul></Typography>
       )}
 
       <Card variant="outlined" sx={styles.card}>
@@ -43,11 +43,11 @@ const FAQ = () => {
           sx={styles.itemContainer}
           onClick={() => toggleExpansion(1)}
         >
-          <Typography sx={styles.text}>How many NFTs there are?</Typography>
+          <Typography sx={styles.text}>When is the Series 1 mint release?</Typography>
           {expanded[1] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
         </Box>
         {expanded[1] && (
-          <Typography sx={styles.text}>Answer: TBA</Typography>
+          <Typography sx={styles.text}><ul>On November 24th, 500 Series 1 DePunkz NFTs will be available to mint.</ul></Typography>
         )}
       </Card>
 
@@ -59,11 +59,11 @@ const FAQ = () => {
         sx={styles.itemContainer}
         onClick={() => toggleExpansion(2)}
       >
-        <Typography sx={styles.text}>How many series there will be?</Typography>
+        <Typography sx={styles.text}>How many NFTs and series there will be?</Typography>
         {expanded[2] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
       </Box>
       {expanded[2] && (
-        <Typography sx={styles.text}>Answer: TBA</Typography>
+        <Typography sx={styles.text}><ul>The DePunkz NFTs will have in total of 10 collectible series with different cyberpunk themes and small supply of NFTs - 500. Each DePunkz collection will feature a limited number of NFTs, available in five distinct rarities.</ul></Typography>
       )}
 
       <Card variant="outlined" sx={styles.card}>
@@ -75,11 +75,13 @@ const FAQ = () => {
           sx={styles.itemContainer}
           onClick={() => toggleExpansion(3)}
         >
-          <Typography sx={styles.text}>What is the original mint price?</Typography>
+          <Typography sx={styles.text}>What is the original mint price of Series 1?</Typography>
           {expanded[3] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
         </Box>
         {expanded[3] && (
-          <Typography sx={styles.text}>Answer: TBA</Typography>
+          <Typography sx={styles.text}><ul>OG PRICE: 100 ADA</ul>
+         <ul> WL PRICE: 110 ADA</ul>
+         <ul> PUBLIC PRICE: 120 ADA</ul></Typography>
         )}
       </Card>
 
@@ -95,7 +97,7 @@ const FAQ = () => {
         {expanded[4] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
       </Box>
       {expanded[4] && (
-        <Typography sx={styles.text}>Answer: TBA</Typography>
+        <Typography sx={styles.text}><ul>TBA</ul></Typography>
       )}
 
       <Card variant="outlined" sx={styles.card}>
@@ -111,7 +113,7 @@ const FAQ = () => {
           {expanded[5] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
         </Box>
         {expanded[5] && (
-          <Typography sx={styles.text}>Answer: TBA</Typography>
+          <Typography sx={styles.text}><ul>We chose the the Cardano blockchain due to its unique blend of scalability, interoperability, and fast transaction speeds, essential for a smooth gaming experience. Its innovative dual-layer architecture and compatibility with the Ergo platform ensure seamless integration of advanced gaming features and cross-chain liquidity</ul></Typography>
         )}
       </Card>
 

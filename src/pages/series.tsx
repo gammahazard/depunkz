@@ -64,6 +64,8 @@ const Series = () => {
             fontWeight: 700,
             lineHeight: '26px',
             ml: 2,
+            pointerEvents:'none',
+            opacity:0.5
           }}
         >
           Series
@@ -79,9 +81,11 @@ const Series = () => {
             fontWeight: 700,
             lineHeight: '26px',
             ml: 2,
+            pointerEvents:'none',
+            opacity:0.5
           }}
         >
-          Send
+          Search
         </Button>
       </Box>
 
@@ -102,7 +106,7 @@ const Series = () => {
               m: 2, // Adjusted for more space around the buttons
             }}
           >
-            Placeholder {index + 1}
+           Coming Soon!
           </Button>
         ))}
       </Box>

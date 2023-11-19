@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from '@mui/material';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
+import Image from 'next/image'
 export default function AboutUs() {
   return (
     <Box>
@@ -24,20 +24,25 @@ export default function AboutUs() {
 
         {/* Paragraph Sections */}
         {[{
-  title: 'Welcome to DePunkz',
-  content: 'An innovative and exclusive community dwelling in the heart of a dystopian, cyberpunk-inspired society. We thrive in chaos, revel in the unconventional, and embrace the very essence of a world teetering on the edge of the future. DePunkz is not just a project; it\'s a way of life, a movement, and an evolution of creative and financial empowerment.'
-}, {
-  title: 'The World We Navigate',
-  content: 'In our cyberpunk-inspired universe, society is a thrilling amalgamation of high-tech marvels, neon-lit streets, and untamed innovation. Here, we focus on quality art, branding, and gaming.'
-}, {
-  title: 'Our Vision',
-  content: 'DePunkz embodies a clear and audacious vision – to pioneer groundbreaking ways of delivering value, bolstering the Cardano ecosystem, and empowering our members. We are a dynamic collective of builders, who focus on building a strong community, quality art, brand name and soon a place for game, so called NEOHUB. NEOHUB won\'t be just a place for gamers, it will be a platform where people can list their games and also ask for game development services.'
+   title: 'Sustained Development and Transparency on Ergo',
+   content: 'Our team, a trio of dedicated professionals, has not only developed CyberVerse on the Ergo Blockchain but also ensured its continual growth through regular updates. This commitment reflects our dedication to providing lasting value to our users. We maintain a high level of transparency development progress, consistently keeping our community informed and involved.'}, {
+   }, {
+  title: 'Responsive to Community Feedback',
+  content: 'We take community feedback very seriously, recognizing it as a crucial element in our development process. The insights and suggestions from our community have been integral in shaping CyberVerse, demonstrating our commitment to a user-centric approach. This responsive attitude has been a key factor in the games success and will continue to be a significant aspect of our work on DePunkz'}, {
+  }, {
+    title: 'Leveraging Experience for DePunkz on Cardano ',
+    content: 'As we expand to the Cardano Blockchain with DePunkz, we bring with us the rich experience and lessons learned from our journey on Ergo. Our aim is to replicate and enhance our successes, tapping into the broader opportunities that Cardano offers. The growth and understanding we have gained on Ergo are pivotal as we embark on this new venture'   }, {
+      }, {  title: 'Innovative and Community-Centric',
+      content: 'Our main focus remains on innovation and community engagement. We are dedicated to building DePunkz as a platform that not only entertains but also engages and empowers its users. We intend to uphold our principles of transparency and responsiveness, ensuring that DePunkz resonates with and is shaped by its community, much like CyberVerse.'  }, {
+       },{ title: 'Vision for the Future',
+  content: 'With DePunkz, we envision creating a unique and immersive experience on the Cardano Blockchain, one that leverages our proven track record on Ergo. Our commitment to continuous improvement, transparency, and community feedback will guide us in making DePunkz a standout project in the blockchain gaming world.'
 }].map((section, index) => (
   <Box key={index} mb={4} px={{ xs: 2, md: 0 }}>  {/* Added padding here */}
     <Typography
-      variant="h2"
+      variant="h6"
       sx={{
         color: '#ffffff',
+        fontWeight: 'bold',
         fontSize: '20px',
         fontFamily: '"Source Sans Pro"',
         lineHeight: '31px',
@@ -67,8 +72,8 @@ export default function AboutUs() {
       </Box>
 
       <Box mt={4} mb={8} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-    <Typography
-        sx={{
+        <Typography
+          sx={{
             color: '#ffffff',
             fontSize: '60px',
             fontFamily: '"Source Sans Pro"',
@@ -76,81 +81,99 @@ export default function AboutUs() {
             lineHeight: '70px',
             mb: 4,
             textAlign: 'center',
-        }}
-    >
-        TEAM
-    </Typography>
+          }}
+        >
+          TEAM
+        </Typography>
 
-    <Box
-        display="flex"
-        gap={2}
-        justifyContent="center"
-        px={{ xs: 2, md: 0 }}
-        flexWrap={{ xs: 'wrap', md: 'nowrap' }}  // Changed sm to md
-    >
-        {[{ name: 'Neopunk', role: 'Founder' }, { name: 'Mongo', role: 'Co-Founder' }, { name: 'Hero', role: 'Game Developer' }, { name: 'Gussano', role: 'Artist' }].map((member) => (
+        <Box
+          display="flex"
+          gap={2}
+          justifyContent="center"
+          px={{ xs: 2, md: 0 }}
+          flexWrap={{ xs: 'wrap', md: 'nowrap' }}
+        >
+          {[
+            { name: 'Neopunk', role: 'Founder & Project Lead', image: '/pixel.png' },
+            { name: 'Mongo', role: 'Co-Founder & Full-Stack Dev', image: '/mongo.png' },
+            { name: 'Hero', role: 'Game Developer', image: '/hero.png' }
+          ].map((member) => (
             <Box
-                component={Button}
-                key={member.name}
+              component={Button}
+              key={member.name}
+              sx={{
+                border: '1px solid #ff3b30',
+                
+                backgroundColor: 'rgba(0,0,0,0)',
+                color: '#ff2d55',
+                fontSize: '20px',
+                fontFamily: '"Source Sans Pro"',
+                fontWeight: 700,
+                lineHeight: '26px',
+                width: { xs: 'calc(100% - 16px)', md: '250px' },
+                height: '325px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+                position: 'relative',
+                pb: 2,
+                mb: { xs: 2, md: 0 },
+              }}
+            >
+           <Image
+  src={member.image}
+  alt={member.name}
+  layout="fill"
+  objectFit="cover" // Changed to cover to ensure the image covers the entire card
+  style={{
+    position: 'absolute', // Ensure the image is positioned absolutely within the card
+    top: 0,
+  
+    left: 0,
+    zIndex: -1 // Place the image behind the text content
+  }}
+/>
+              <Box
                 sx={{
-                    border: '1px solid #ff3b30',
-                    backgroundColor: 'rgba(0,0,0,0)',
-                    color: '#ff2d55',
-                    fontSize: '20px',
+                  position: 'absolute',
+                  bottom: 0,
+                  width: '100%',
+                  backgroundColor: '#ff3b30',
+                  py: 1,
+                  textAlign: 'left',
+                  paddingLeft: '10px',
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: '#000000',
+                    fontSize: '32px',
                     fontFamily: '"Source Sans Pro"',
                     fontWeight: 700,
-                    lineHeight: '26px',
-                    width: { xs: 'calc(100% - 16px)', md: '250px' },  // Changed sm to md
-                    height: '325px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'flex-end',
-                    position: 'relative',
-                    pb: 2,
-                    mb: { xs: 2, md: 0 },  // Changed sm to md
-                }}
-            >
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        bottom: 0,
-                        width: '100%',
-                        backgroundColor: '#ff3b30',
-                        py: 1,
-                        textAlign: 'left',
-                        paddingLeft: '10px',
-                    }}
+                    lineHeight: '42px',
+                  }}
                 >
-                    <Typography
-                        sx={{
-                            color: '#000000',
-                            fontSize: '32px',
-                            fontFamily: '"Source Sans Pro"',
-                            fontWeight: 700,
-                            lineHeight: '42px',
-                        }}
-                    >
-                        {member.name}
-                    </Typography>
-                    <Typography
-                        sx={{
-                            color: '#c2c2c2',
-                            fontSize: '16px',
-                            fontFamily: '"Source Sans Pro"',
-                            fontWeight: 500,
-                            lineHeight: '19px',
-                        }}
-                    >
-                        {member.role}
-                    </Typography>
-                </Box>
+                  {member.name}
+                </Typography>
+                <Typography
+                  sx={{
+                    color: '#c2c2c2',
+                    fontSize: '16px',
+                    fontFamily: '"Source Sans Pro"',
+                    fontWeight: 500,
+                    lineHeight: '19px',
+                  }}
+                >
+                  {member.role}
+                </Typography>
+              </Box>
             </Box>
-        ))}
-    </Box>
-</Box>
+          ))}
+        </Box>
+      </Box>
 
-<Footer onRoadmapClick={() => {}} />
+      <Footer onRoadmapClick={() => {}} />
     </Box>
   );
 }

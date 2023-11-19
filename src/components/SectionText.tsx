@@ -1,10 +1,22 @@
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, Snackbar } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-
+import React, {useState} from 'react';
 const SectionText = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+
+  const handleSnackbarOpen = () => {
+    setOpenSnackbar(true);
+  };
+
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpenSnackbar(false);
+  };
 
   return (
     <Box 
@@ -49,6 +61,7 @@ const SectionText = () => {
         <Box display="flex" gap={2} style={{maxWidth: '80%'}}>
           <Button 
             variant="contained"
+            onClick={handleSnackbarOpen}
             style={{
               backgroundColor: '#ff2d55',
               color: '#000000',
@@ -64,6 +77,7 @@ const SectionText = () => {
             Discover DePunkz
           </Button>
           <Button 
+           onClick={handleSnackbarOpen}
             variant="outlined"
             style={{
               borderColor: '#ff2d55',
@@ -97,6 +111,12 @@ const SectionText = () => {
           minWidth: isMobile ? '300px' : '300px',
         }}
       ></Box>
+    <Snackbar
+        open={openSnackbar}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+        message="Feature Coming Soon!"
+      />
     </Box>
   );
 };

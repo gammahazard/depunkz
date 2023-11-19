@@ -1,32 +1,46 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, Snackbar } from '@mui/material';
+import React, {useState} from 'react'
 import Link from 'next/link';
 export default function NeohubSection() {
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+
+  // Function to open Snackbar
+  const handleOpenSnackbar = () => {
+    setOpenSnackbar(true);
+  };
+
+  // Function to close Snackbar
+  const handleCloseSnackbar = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpenSnackbar(false);
+  };
   return (
     <Box 
         display="flex" 
-        flexDirection={{ xs: 'column', md: 'row' }} // Updated for responsive design
+        flexDirection={{ xs: 'column', md: 'row' }}
         alignItems="center" 
         justifyContent="center" 
         mt={4}
-        textAlign={{ xs: 'center', md: 'left' }} // Updated for responsive design
-        px={{ xs: 2, md: 0 }} // Added horizontal padding for smaller screens
+        textAlign={{ xs: 'center', md: 'left' }}
+        px={{ xs: 2, md: 0 }}
     >
       <Box 
-        mb={{ xs: 2, md: 0 }} // Added bottom margin for smaller screens
-        mr={{ xs: 0, md: 4 }} // Updated right margin for responsive design
+        mb={{ xs: 2, md: 0 }}
+        mr={{ xs: 0, md: 4 }}
         sx={{ 
-          width: { xs: '100%', md: '445px' }, // Updated for responsive design
-          height: { xs: 'auto', md: '446px' }, // Updated for responsive design
-          maxWidth: { xs: '345px', md: 'none' }, // Set max width for smaller screens
+          width: { xs: '100%', md: '445px' },
+          height: { xs: 'auto', md: '446px' },
+          maxWidth: { xs: '345px', md: 'none' },
           borderRadius: '8px',
-         right:'500px',
+          right:'500px',
           backgroundImage: 'url(/logo.png)',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* Placeholder to ensure the box size is respected. */}
         <Box sx={{ width: '100%', paddingBottom: { xs: '100%', md: '0' } }} />
       </Box>
       <Box sx={{ maxWidth: '400px' }}>
@@ -34,10 +48,10 @@ export default function NeohubSection() {
           variant="h1"
           sx={{
             color: '#ffffff',
-            fontSize: { xs: '40px', md: '60px' }, // Updated for responsive design
+            fontSize: { xs: '40px', md: '60px' },
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,
-            lineHeight: { xs: '45px', md: '70px' }, // Updated for responsive design
+            lineHeight: { xs: '45px', md: '70px' },
             mb: 2,
           }}
         >
@@ -69,10 +83,10 @@ export default function NeohubSection() {
         </Typography>
         <Box 
             display="flex" 
-            justifyContent={{ xs: 'center', md: 'flex-start' }} // Updated for responsive design
-            flexDirection={{ xs: 'column', md: 'row' }} // Updated for responsive design
-            alignItems="center" // Added for center alignment on smaller screens
-            gap={2} // Added gap for space between buttons on smaller screens
+            justifyContent={{ xs: 'center', md: 'flex-start' }}
+            flexDirection={{ xs: 'column', md: 'row' }}
+            alignItems="center"
+            gap={2}
         >
           <Button
             variant="outlined"
@@ -86,11 +100,12 @@ export default function NeohubSection() {
               lineHeight: '26px',
               width: '172px', 
               height: '60px',
-              mb: { xs: 2, md: 0 }, // Added bottom margin for smaller screens
+              mb: { xs: 2, md: 0 },
             }}
+            onClick={handleOpenSnackbar}
           >
             Coming Soon
-    </Button>
+          </Button>
           <Button
             variant="contained"
             sx={{
@@ -102,22 +117,22 @@ export default function NeohubSection() {
               lineHeight: '26px',
               width: '200px',
               height: '60px',
-              
             }}
           >
-<a href="https://docs.depunkz.io" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
-  Whitepaper
-</a>
-
-
-
+            <a href="https://docs.depunkz.io" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
+              Whitepaper
+            </a>
           </Button>
-        
         </Box>
-      
       </Box>
      
+      {/* Snackbar Component */}
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+        message="Feature Coming Soon!"
+      />
     </Box>
- 
-  );
-}
+);
+          }

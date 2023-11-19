@@ -17,8 +17,9 @@ const Merchandise = () => {
           <Box sx={styles.formContainer}>
             <TextField
               variant="outlined"
-              placeholder="Enter your email"
+              placeholder="Coming soon!"
               sx={styles.input}
+              
             />
             <Button sx={styles.button}>Send</Button>
           </Box>
