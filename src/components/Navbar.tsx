@@ -101,7 +101,14 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
                 </Link>
               </ListItem>
             ))}
-            <ListItem button onClick={() => { handleMobileMenuClose(); handleRoadmapClick(); }} style={{ justifyContent: 'center' }}>
+           <ListItem 
+  button 
+  onClick={handleSnackbarOpen} 
+  sx={{ 
+    justifyContent: 'center', 
+    backgroundColor: 'red!important' 
+  }} 
+>
               <Typography variant="body1" className="nav-item" component="div" style={{ textDecoration: 'none' }}>Roadmap</Typography>
             </ListItem>
             <ListItem button onClick={handleSnackbarOpen} style={{ justifyContent: 'center', backgroundColor: 'red!important' }}>
