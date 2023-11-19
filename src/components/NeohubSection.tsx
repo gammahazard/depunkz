@@ -120,7 +120,7 @@ export default function NeohubSection() {
             }}
           >
             <a href="https://docs.depunkz.io" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
-              Whitepaper
+              Litepaper
             </a>
           </Button>
         </Box>
