@@ -11,7 +11,7 @@ const SectionText = () => {
     setOpenSnackbar(true);
   };
 
-  const handleSnackbarClose = (event, reason) => {
+  const handleSnackbarClose = (event : any, reason : any) => {
     if (reason === 'clickaway') {
       return;
     }
