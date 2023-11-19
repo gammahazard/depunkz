@@ -47,7 +47,7 @@ const FAQ = () => {
           {expanded[1] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
         </Box>
         {expanded[1] && (
-          <Typography sx={styles.text}><ul>On November 24th, 500 Series 1 DePunkz NFTs will be available to mint.</ul></Typography>
+          <Typography sx={styles.text}><ul>On November 24th, 500 NFTs from our first series will be available! </ul></Typography>
         )}
       </Card>
 
@@ -63,7 +63,7 @@ const FAQ = () => {
         {expanded[2] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
       </Box>
       {expanded[2] && (
-        <Typography sx={styles.text}><ul>The DePunkz NFTs will have in total of 10 collectible series with different cyberpunk themes and small supply of NFTs - 500. Each DePunkz collection will feature a limited number of NFTs, available in five distinct rarities.</ul></Typography>
+        <Typography sx={styles.text}><ul>The DePunkz NFTs will have a total of 10 collectible series with different cyberpunk themes along with a small supply of NFTs - 500. Each DePunkz collection will feature a limited number of NFTs, available in five distinct rarities.</ul></Typography>
       )}
 
       <Card variant="outlined" sx={styles.card}>
