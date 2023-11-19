@@ -10,7 +10,7 @@ export default function NeohubSection() {
   };
 
   // Function to close Snackbar
-  const handleCloseSnackbar = (event, reason) => {
+  const handleCloseSnackbar = (event : any , reason : any) => {
     if (reason === 'clickaway') {
       return;
     }
