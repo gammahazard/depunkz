@@ -27,7 +27,7 @@ const Section2 = () => {
           },
           {
             title: 'Uniqueness',
-            text: 'Each series has 250 NFTs and over 80 traits.'
+            text: 'Each series has 500 NFTs and over 80 traits.'
           },
           {
             title: 'Utility & Benefits',

@@ -116,7 +116,20 @@ const FAQ = () => {
           <Typography sx={styles.text}><ul>We chose the the Cardano blockchain due to its unique blend of scalability, interoperability, and fast transaction speeds, essential for a smooth gaming experience. Its innovative dual-layer architecture and compatibility with the Ergo platform ensure seamless integration of advanced gaming features and cross-chain liquidity</ul></Typography>
         )}
       </Card>
-
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        my={2}
+        sx={styles.itemContainer}
+        onClick={() => toggleExpansion(6)}
+      >
+        <Typography sx={styles.text}>What is NEOHUB?</Typography>
+        {expanded[6] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
+      </Box>
+      {expanded[6] && (
+        <Typography sx={styles.text}><ul>NEOHUB is a gaming platform where players can play games, win prizes, listen to music, swap tokens, and more. DePunkz NFTs are playing a key role in NEOHUB's success to fund the further development after MVP version and holders of DePunkz NFTs will benefit from it.</ul></Typography>
+      )}
       <Divider sx={styles.divider} />
 
     </Box>

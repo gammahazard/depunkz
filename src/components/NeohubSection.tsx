@@ -67,7 +67,7 @@ export default function NeohubSection() {
           }}
           paragraph
         >
-          Game library where you can play, have fun, compete, and have a chance to win various prizes!
+         Game library where you can play, have fun, compete, and have a chance to win various prizes
         </Typography>
         <Typography
           variant="body1"
@@ -79,7 +79,7 @@ export default function NeohubSection() {
             mb: 2,
           }}
         >
-          Stay tuned for exciting updates and unleash your gaming prowess!
+        Stay tuned for exciting updates and unleash your gaming prowess
         </Typography>
         <Box 
             display="flex" 
@@ -108,6 +108,7 @@ export default function NeohubSection() {
           </Button>
           <Button
             variant="contained"
+            onClick={handleOpenSnackbar}
             sx={{
               backgroundColor: '#ff2d55',
               color: '#000',
@@ -119,9 +120,9 @@ export default function NeohubSection() {
               height: '60px',
             }}
           >
-            <a href="https://docs.depunkz.io" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'black' }}>
+          
               Litepaper
-            </a>
+       
           </Button>
         </Box>
       </Box>

@@ -1,9 +1,23 @@
 // src/pages/Merchandise.tsx
-import { Box, Typography, TextField, Button } from '@mui/material';
+import { Box, Typography, TextField, Button, Snackbar } from '@mui/material';
+import React, {useState} from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const Merchandise = () => {
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+
+  const handleSnackbarOpen = () => {
+    setOpenSnackbar(true);
+  };
+
+  const handleSnackbarClose = (event : any, reason : any) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpenSnackbar(false);
+  };
+
     return (
       <Box sx={styles.pageContainer}>
         <Navbar />
@@ -21,11 +35,17 @@ const Merchandise = () => {
               sx={styles.input}
               
             />
-            <Button sx={styles.button}>Send</Button>
+            <Button onClick={handleSnackbarOpen} sx={styles.button}>Send</Button>
           </Box>
         </Box>
   
         <Footer onRoadmapClick={() => {}} />
+        <Snackbar
+        open={openSnackbar}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+        message="Feature Coming Soon!"
+      />
       </Box>
     );
   };
@@ -90,6 +110,7 @@ const styles = {
     fontWeight: 700,
     lineHeight: '26px',
   },
+  
 };
 
 export default Merchandise;

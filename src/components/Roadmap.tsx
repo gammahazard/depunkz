@@ -21,55 +21,57 @@ const Roadmap = () => {
 
       <Card variant="outlined" sx={styles.card}>
         <Box display="flex" justifyContent="space-between" alignItems="center" p={1} sx={styles.itemContainer}>
-          <Typography sx={styles.text}>Release a development plan</Typography>
+          <Typography sx={styles.text}>Release season 1 of DePunkz NFTs</Typography>
           <Box sx={styles.iconWrapper}>
           <CheckCircleOutline />
           </Box>
         </Box>
       </Card>
 
-      <Box display="flex" justifyContent="space-between" alignItems="center" my={2} sx={styles.itemContainer}>
-        <Typography sx={styles.text}>Release Season 1 DePunkz NFTs to secure funding for future development</Typography>
-        <Box sx={styles.iconWrapper}>
-          <Loop />
-        </Box>
-      </Box>
+
   
 
-      <Card variant="outlined" sx={styles.card}>
-        
+
         <Box display="flex" justifyContent="space-between" alignItems="center" p={1} sx={styles.itemContainer}>
           <Typography sx={styles.text}>Host Giveaway for holders of DePunkz NFTs</Typography>
           <Box sx={styles.iconWrapper}>
             <Loop />
           </Box>
         </Box>
-      </Card>
+   
+        <Card variant="outlined" sx={styles.card}>
 
       <Box display="flex" justifyContent="space-between" alignItems="center" my={2} sx={styles.itemContainer}>
-        <Typography sx={styles.text}>Launch NEOHUB MVP gaming app with basic UI and various features</Typography>
+        <Typography sx={styles.text}>Release a development plan</Typography>
         <Box sx={styles.iconWrapper}>
           <Loop />
         </Box>
       </Box>
-  
+      </Card>
 
-      <Card variant="outlined" sx={styles.card}>
+
         <Box display="flex" justifyContent="space-between" alignItems="center" p={1} sx={styles.itemContainer}>
-          <Typography sx={styles.text}>Release season 2 DePunkz NFTs</Typography>
+          <Typography sx={styles.text}>Launch NEOHUB MVP gaming app with basic UI and various features</Typography>
           <Box sx={styles.iconWrapper}>
             <Loop />
           </Box>
         </Box>
-      </Card>
+        <Card variant="outlined" sx={styles.card}>
       <Box display="flex" justifyContent="space-between" alignItems="center" my={2} sx={styles.itemContainer}>
         <Typography sx={styles.text}>First Airdrop for DePunkz holders who hold atleast 5 NFTs</Typography>
         <Box sx={styles.iconWrapper}>
           <Loop />
         </Box>
-
-        
       </Box>
+      </Card>
+     
+        <Box display="flex" justifyContent="space-between" alignItems="center" p={1} sx={styles.itemContainer}>
+          <Typography sx={styles.text}>Release series 2 of DePunkz NFTs</Typography>
+          <Box sx={styles.iconWrapper}>
+            <Loop />
+          </Box>
+        </Box>
+  
       <Divider sx={styles.divider} />
      
     </Box>

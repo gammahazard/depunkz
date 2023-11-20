@@ -55,8 +55,7 @@ const SectionText = () => {
             marginBottom: '20px',
           }}
         >
-          DePunkz is an innovative NFT project - a decentralized platform for unique digital collectibles.
-          Experience the thrill of owning rare and valuable digital assets with Depunkz.
+           DePunkz is an NFT project building NEOHUB, a gaming platform where players can play games, win prizes, chat, listen to music, swap tokens, and more.
         </Typography>
         <Box display="flex" gap={2} style={{maxWidth: '80%'}}>
           <Button 

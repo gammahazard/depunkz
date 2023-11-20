@@ -50,9 +50,9 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
 
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center" justifyContent="center" flexGrow={1}>
         <Box display="flex" alignItems="center" gap={2}>
-          <Link href="https://docs.depunkz.io" target="_blank" rel="noopener noreferrer">
-            <Button className="nav-item">Litepaper</Button>
-          </Link>
+       
+            <Button onClick={handleSnackbarOpen} className="nav-item">Litepaper</Button>
+     
           <Link href="/series" passHref><Button className="nav-item">Series</Button></Link>
           <Button className="nav-item" onClick={handleRoadmapClick}>Roadmap</Button>
           <Link href="/overview" passHref><Button className="nav-item">About us</Button></Link>
@@ -121,7 +121,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
         open={openSnackbar}
         autoHideDuration={6000}
         onClose={handleSnackbarClose}
-        message="Neohub - Coming Soon!"
+        message="Coming Soon!"
       />
     </Box>
   );
