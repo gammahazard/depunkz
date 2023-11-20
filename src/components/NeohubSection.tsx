@@ -67,7 +67,8 @@ export default function NeohubSection() {
           }}
           paragraph
         >
-         Game library where you can play, have fun, compete, and have a chance to win various prizes
+       NEOHUB is a gaming platform where players can play games, win prizes, listen to music, swap tokens, and more. 
+MVP version of NEOHUB will be launched on the DePunkz Series 1 minting day!
         </Typography>
         <Typography
           variant="body1"
