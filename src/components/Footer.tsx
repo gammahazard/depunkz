@@ -18,15 +18,7 @@ const Footer: React.FC<FooterProps> = ({ onRoadmapClick }) => {
 
       <Box sx={styles.linksContainer}>
         <Box sx={styles.menuItemBox}>
-          <Typography
-            component="a"
-            href="https://docs.depunkz.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={styles.menuItemWithWeight}
-          >
-            Litepaper
-          </Typography>
+   
         </Box>
 
         <Box sx={styles.menuItemBox}>
