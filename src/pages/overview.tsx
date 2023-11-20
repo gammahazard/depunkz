@@ -32,10 +32,9 @@ export default function AboutUs() {
   }, {
     title: 'Leveraging Experience for DePunkz on Cardano ',
     content: 'As we expand to the Cardano Blockchain with DePunkz, we bring with us the rich experience and lessons learned from our journey on Ergo. Our aim is to replicate and enhance our successes, tapping into the broader opportunities that Cardano offers. The growth and understanding we have gained on Ergo are pivotal as we embark on this new venture'   }, {
-      }, {  title: 'Innovative and Community-Centric',
-      content: 'Our main focus remains on innovation and community engagement. We are dedicated to building DePunkz as a platform that not only entertains but also engages and empowers its users. We intend to uphold our principles of transparency and responsiveness, ensuring that DePunkz resonates with and is shaped by its community, much like CyberVerse.'  }, {
+      },  {
        },{ title: 'Vision for the Future',
-  content: 'With DePunkz, we envision creating a unique and immersive experience on the Cardano Blockchain, one that leverages our proven track record on Ergo. Our commitment to continuous improvement, transparency, and community feedback will guide us in making DePunkz a standout project in the blockchain gaming world.'
+  content: 'DePunkz is focused on creating a connection between the gaming communities on the Ergo and Cardano blockchains. Drawing from our experience with Ergo, we plan to engage with the Cardano community to offer a unified gaming experience. Our approach is centered on interoperability, continuous improvement, and community feedback, aiming to make DePunkz a notable project in blockchain gaming.'
 }].map((section, index) => (
   <Box key={index} mb={4} px={{ xs: 2, md: 0 }}>  {/* Added padding here */}
     <Typography
