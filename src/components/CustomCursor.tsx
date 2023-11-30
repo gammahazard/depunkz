@@ -51,6 +51,7 @@ const CustomCursor = () => {
     <div
       style={{
         position: 'fixed',
+        zIndex:'9999',
         top: `${position.y}px`,
         left: `${position.x}px`,
         width: '40px',

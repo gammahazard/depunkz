@@ -76,21 +76,21 @@ const SectionText = () => {
             Discover DePunkz
           </Button>
           <Button 
-           onClick={handleSnackbarOpen}
-            variant="outlined"
-            style={{
-              borderColor: '#ff2d55',
-              color: '#ff2d55',
-              fontSize: '20px',
-              fontWeight: 700,
-              lineHeight: '26px',
-              width: '40%', // Adjusted width
-              height: '60px',
-              outline: 'none',
-            }}
-          >
-            Buy NFT
-          </Button>
+  onClick={() => window.open('https://saturnnft.io/mint/v2/497056e1-3aaf-4488-b627-91afe872397e', '_blank', 'noopener,noreferrer')}
+  variant="outlined"
+  style={{
+    borderColor: '#ff2d55',
+    color: '#ff2d55',
+    fontSize: '20px',
+    fontWeight: 700,
+    lineHeight: '26px',
+    width: '40%', // Adjusted width
+    height: '60px',
+    outline: 'none',
+  }}
+>
+  Buy NFT
+</Button>
         </Box>
       </Box>
       <Box 

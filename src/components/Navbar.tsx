@@ -1,10 +1,9 @@
-import { Box, Button, Drawer, IconButton, List, ListItem, Typography, Snackbar, SnackbarContent } from '@mui/material';
+import { Box, Button, Drawer, IconButton, List, ListItem, Typography } from '@mui/material';
 import Link from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { SnackbarCloseReason } from '@mui/material';
 
 interface NavbarProps {
   onRoadmapClick?: () => void;
@@ -12,17 +11,10 @@ interface NavbarProps {
 
 export default function Navbar({ onRoadmapClick }: NavbarProps) {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openSnackbar, setOpenSnackbar] = useState(false);
   const router = useRouter();
 
   const handleMobileMenuOpen = () => setMobileMenuOpen(true);
   const handleMobileMenuClose = () => setMobileMenuOpen(false);
-  const handleSnackbarClose = (event: React.SyntheticEvent | Event, reason?: SnackbarCloseReason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-    setOpenSnackbar(false);
-  };
 
   const handleRoadmapClick = () => {
     if (router.pathname !== '/') {
@@ -30,10 +22,6 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
     } else {
       onRoadmapClick?.();
     }
-  };
-
-  const handleSnackbarOpen = () => {
-    setOpenSnackbar(true);
   };
 
   return (
@@ -50,9 +38,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
 
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center" justifyContent="center" flexGrow={1}>
         <Box display="flex" alignItems="center" gap={2}>
-       
-            <Button onClick={handleSnackbarOpen} className="nav-item">Litepaper</Button>
-     
+          <Button onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')} className="nav-item">Litepaper</Button>
           <Link href="/series" passHref><Button className="nav-item">Series</Button></Link>
           <Button className="nav-item" onClick={handleRoadmapClick}>Roadmap</Button>
           <Link href="/overview" passHref><Button className="nav-item">About us</Button></Link>
@@ -67,7 +53,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
         <IconButton href="https://discord.gg/FCPeYAUgW" target="_blank" rel="noopener noreferrer" size="large">
           <Image src="/discord.svg" alt="Discord" width={24} height={24} />
         </IconButton>
-        <Button variant="outlined" className="join-btn" onClick={handleSnackbarOpen}>Neohub</Button>
+        <Button variant="outlined" className="join-btn" onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')}>Neohub</Button>
       </Box>
 
       <Box display={{ xs: 'flex', md: 'none' }} alignItems="center">
@@ -101,28 +87,12 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
                 </Link>
               </ListItem>
             ))}
-           <ListItem 
-  button 
-  onClick={handleSnackbarOpen} 
-  sx={{ 
-    justifyContent: 'center', 
-    backgroundColor: 'red!important' 
-  }} 
->
-              <Typography variant="body1" className="nav-item" component="div" style={{ textDecoration: 'none' }}>Roadmap</Typography>
-            </ListItem>
-            <ListItem button onClick={handleSnackbarOpen} style={{ justifyContent: 'center', backgroundColor: 'red!important' }}>
+            <ListItem button onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')} style={{ justifyContent: 'center', backgroundColor: 'red!important' }}>
               <Typography variant="body1" className="nav-item" component="div" style={{ textDecoration: 'none' }}>Neohub</Typography>
             </ListItem>
           </List>
         </Drawer>
       </Box>
-      <Snackbar
-        open={openSnackbar}
-        autoHideDuration={6000}
-        onClose={handleSnackbarClose}
-        message="Coming Soon!"
-      />
     </Box>
   );
 }

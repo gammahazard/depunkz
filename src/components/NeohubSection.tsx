@@ -2,20 +2,7 @@ import { Box, Button, Typography, Snackbar } from '@mui/material';
 import React, {useState} from 'react'
 import Link from 'next/link';
 export default function NeohubSection() {
-  const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  // Function to open Snackbar
-  const handleOpenSnackbar = () => {
-    setOpenSnackbar(true);
-  };
-
-  // Function to close Snackbar
-  const handleCloseSnackbar = (event : any , reason : any) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-    setOpenSnackbar(false);
-  };
   return (
     <Box 
         display="flex" 
@@ -89,52 +76,45 @@ MVP version of NEOHUB will be launched on the DePunkz Series 1 minting day!
             alignItems="center"
             gap={2}
         >
-          <Button
-            variant="outlined"
-            sx={{
-              borderColor: '#ff2d55',
-              backgroundColor: 'rgba(0,0,0,0)',
-              color: '#ff2d55',
-              fontSize: '20px',
-              fontFamily: '"Source Sans Pro"',
-              fontWeight: 700,
-              lineHeight: '26px',
-              width: '172px', 
-              height: '60px',
-              mb: { xs: 2, md: 0 },
-            }}
-            onClick={handleOpenSnackbar}
-          >
-            Coming Soon
-          </Button>
-          <Button
-            variant="contained"
-            onClick={handleOpenSnackbar}
-            sx={{
-              backgroundColor: '#ff2d55',
-              color: '#000',
-              fontSize: '20px',
-              fontFamily: '"Source Sans Pro"',
-              fontWeight: 700,
-              lineHeight: '26px',
-              width: '200px',
-              height: '60px',
-            }}
-          >
-          
-              Litepaper
-       
-          </Button>
+      <Button
+  variant="outlined"
+  sx={{
+    borderColor: '#ff2d55',
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: '#ff2d55',
+    fontSize: '20px',
+    fontFamily: '"Source Sans Pro"',
+    fontWeight: 700,
+    lineHeight: '26px',
+    width: '172px', 
+    height: '60px',
+    mb: { xs: 2, md: 0 },
+  }}
+  onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')}
+>
+  NeoHub
+</Button>
+<Button
+  variant="contained"
+  onClick={() => window.open('https://docs.depunkz.io', '_blank', 'noopener,noreferrer')}
+  sx={{
+    backgroundColor: '#ff2d55',
+    color: '#000',
+    fontSize: '20px',
+    fontFamily: '"Source Sans Pro"',
+    fontWeight: 700,
+    lineHeight: '26px',
+    width: '200px',
+    height: '60px',
+  }}
+>
+  Litepaper
+</Button>
         </Box>
       </Box>
      
       {/* Snackbar Component */}
-      <Snackbar
-        open={openSnackbar}
-        autoHideDuration={6000}
-        onClose={handleCloseSnackbar}
-        message="Feature Coming Soon!"
-      />
+  
     </Box>
 );
           }
