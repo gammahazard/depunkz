@@ -110,12 +110,7 @@ const SectionText = () => {
           minWidth: isMobile ? '300px' : '300px',
         }}
       ></Box>
-    <Snackbar
-        open={openSnackbar}
-        autoHideDuration={6000}
-        onClose={handleSnackbarClose}
-        message="Feature Coming Soon!"
-      />
+
     </Box>
   );
 };
