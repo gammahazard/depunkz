@@ -47,7 +47,7 @@ const FAQ = () => {
           {expanded[1] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
         </Box>
         {expanded[1] && (
-          <Typography sx={styles.text}><ul>On November 24th, 500 NFTs from our first series will be available! </ul></Typography>
+          <Typography sx={styles.text}><ul>On November 30th, at 8PM UTC 500 NFTs from our first series will be available! </ul></Typography>
         )}
       </Card>
 
@@ -97,7 +97,7 @@ const FAQ = () => {
         {expanded[4] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
       </Box>
       {expanded[4] && (
-        <Typography sx={styles.text}><ul>TBA</ul></Typography>
+        <Typography sx={styles.text}><ul>68948fd8fef5655b4e8a264eeadf0cc83742a47b9080fc8ef56fe2f3</ul></Typography>
       )}
 
       <Card variant="outlined" sx={styles.card}>
